@@ -17,6 +17,5 @@ LOAD DATA LOCAL INFILE '~/data/movierating.del' INTO TABLE MovieRating FIELDS TE
 
 LOAD DATA LOCAL INFILE '~/data/sales.del' INTO TABLE Sales FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
 
-/* TODO:  insert default max values */
 INSERT INTO MaxPersonID (id) VALUES (69000);
 INSERT INTO MaxMovieID (id) VALUES (4750);
