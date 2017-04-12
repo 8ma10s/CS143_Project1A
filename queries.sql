@@ -12,4 +12,12 @@ SELECT Movie.title FROM Movie, Sales
 WHERE Movie.id = Sales.mid
 AND Sales.ticketsSold > 1000000;
 
+-- OUR OWN QUERIES:
+
+-- Average imdb rating of movies directed by James Cameron
+SELECT avg(MovieRating.imdb) as AverageDirectorRating FROM MovieRating, MovieDirector, Director
+WHERE MovieRating.mid = MovieDirector.mid
+AND MovieDirector.did = Director.id
+AND Director.first = 'James' AND Director.last = 'Cameron';
+
 
