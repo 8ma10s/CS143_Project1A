@@ -5,10 +5,14 @@ AND MovieActor.mid = Movie.id
 AND Movie.title = 'Die Another Day';
 
 -- count of all the actors who acted in multiple movies
-SELECT COUNT(aid) as ActorsInMultipleMovies
+CREATE VIEW ActorNumMovies(aid, NumMovies) as
+SELECT aid, COUNT(aid)
 FROM MovieActor
-GROUP BY aid, mid
-HAVING COUNT(aid) > 1;
+GROUP BY aid;
+
+SELECT COUNT(aid)
+FROM ActorNumMovies
+WHERE NumMovies > 1;
 
 --  title of movies that sell more than 1,000,000 tickets
 SELECT Movie.title FROM Movie, Sales
