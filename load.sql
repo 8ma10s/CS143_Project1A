@@ -1,21 +1,46 @@
-LOAD DATA LOCAL INFILE '~/data/actor1.del' INTO TABLE Actor FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
-LOAD DATA LOCAL INFILE '~/data/actor2.del' INTO TABLE Actor FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
-LOAD DATA LOCAL INFILE '~/data/actor3.del' INTO TABLE Actor FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+-- Movie
+load data local infile '~/data/movie.del' into table Movie
+fields terminated by ',' optionally enclosed by '"';
 
-LOAD DATA LOCAL INFILE '~/data/director.del' INTO TABLE Director FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+-- Actor
+load data local infile '~/data/actor1.del' into table Actor
+fields terminated by ',' optionally enclosed by '"';
 
-LOAD DATA LOCAL INFILE '~/data/movieactor1.del' INTO TABLE MovieActor FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
-LOAD DATA LOCAL INFILE '~/data/movieactor2.del' INTO TABLE MovieActor FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+load data local infile '~/data/actor2.del' into table Actor
+fields terminated by ',' optionally enclosed by '"';
 
-LOAD DATA LOCAL INFILE '~/data/movie.del' INTO TABLE Movie FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+load data local infile '~/data/actor3.del' into table Actor
+fields terminated by ',' optionally enclosed by '"';
 
-LOAD DATA LOCAL INFILE '~/data/moviedirector.del' INTO TABLE MovieDirector FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+-- Sales
+load data local infile '~/data/sales.del' into table Sales
+fields terminated by ',' optionally enclosed by '"';
 
-LOAD DATA LOCAL INFILE '~/data/moviegenre.del' INTO TABLE MovieGenre FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+-- Director
+load data local infile '~/data/director.del' into table Director
+fields terminated by ',' optionally enclosed by '"';
 
-LOAD DATA LOCAL INFILE '~/data/movierating.del' INTO TABLE MovieRating FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+-- MovieGenre
+load data local infile '~/data/moviegenre.del' into table MovieGenre
+fields terminated by ',' optionally enclosed by '"';
 
-LOAD DATA LOCAL INFILE '~/data/sales.del' INTO TABLE Sales FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+-- MovieDirector
+load data local infile '~/data/moviedirector.del' into table MovieDirector
+fields terminated by ',' optionally enclosed by '"';
 
-INSERT INTO MaxPersonID (id) VALUES (69000);
-INSERT INTO MaxMovieID (id) VALUES (4750);
+-- MovieActor
+load data local infile '~/data/movieactor1.del' into table MovieActor
+fields terminated by ',' optionally enclosed by '"';
+
+load data local infile '~/data/movieactor2.del' into table MovieActor
+fields terminated by ',' optionally enclosed by '"';
+
+-- MovieRating
+load data local infile '~/data/movierating.del' into table MovieRating
+fields terminated by ',' optionally enclosed by '"';
+
+-- MaxPersonID
+insert into MaxPersonID values(69000);
+
+-- MaxMovieID
+insert into MaxMovieID values(4750);
