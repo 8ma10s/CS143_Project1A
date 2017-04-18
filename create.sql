@@ -35,7 +35,7 @@ create table Director(id int, last varchar(20), first varchar(20), dob date, dod
 -- MovieGenre
 -- referential integrity #2: mid must reference id from Movie
 create table MovieGenre(mid int, genre varchar(20),
-       primary key(mid),
+       primary key(mid,genre),
        foreign key (mid) references Movie(id))
        engine=innodb;
 
